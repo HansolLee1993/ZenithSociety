@@ -8,6 +8,5 @@ namespace ZenithDataLib
 {
     public class IdentityModels
     {
-
     }
 }
