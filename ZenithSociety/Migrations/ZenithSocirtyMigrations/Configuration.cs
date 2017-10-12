@@ -3,6 +3,7 @@ namespace ZenithSociety.Migrations.ZenithSocirtyMigrations
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -51,6 +52,64 @@ namespace ZenithSociety.Migrations.ZenithSocirtyMigrations
                 if (result.Succeeded)
                     userManager.AddToRole(userManager.FindByEmail(user.Email).Id, "Member");
             }
+
+            // Seed data for ActivityCategory
+            List<ActivityCategory> ActivityCategories = new List<ActivityCategory>() {
+                 new ActivityCategory {
+                        ActivityDescription="Senior’s Golf Tournament",
+                        CreationDate =  new DateTime(2017, 10, 5, 1, 00, 0)
+                    },
+                 new ActivityCategory {
+                        ActivityDescription="Leadership General Assembly Meeting",
+                        CreationDate =  new DateTime(2017, 10, 5, 1, 00, 0)
+                    },
+                 new ActivityCategory {
+                        ActivityDescription="Youth Bowling Tournament",
+                        CreationDate =  new DateTime(2017, 10, 5, 1, 00, 0)
+                    },
+                 new ActivityCategory {
+                        ActivityDescription="Young ladies cooking lessons",
+                        CreationDate =  new DateTime(2017, 9, 8, 1, 00, 0)
+                    },
+                 new ActivityCategory {
+                        ActivityDescription="Youth craft lessons",
+                        CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
+                    },
+                 new ActivityCategory {
+                        ActivityDescription="Lunch",
+                        CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
+                    },
+                 new ActivityCategory {
+                        ActivityDescription="Pancake Breakfast",
+                        CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
+                    },
+                 new ActivityCategory {
+                        ActivityDescription="Swimming Lessons for the youth",
+                        CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
+                    },
+                 new ActivityCategory {
+                        ActivityDescription="Swimming Exercise for parents",
+                        CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
+                    },
+                 new ActivityCategory {
+                        ActivityDescription="Bingo Tournament",
+                        CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
+                    },
+                 new ActivityCategory {
+                        ActivityDescription="BBQ Lunch",
+                        CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
+                    },
+                  new ActivityCategory {
+                        ActivityDescription="Garage Sale",
+                        CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
+                    },
+                };
+
+            context.ActivityCategories.AddOrUpdate(
+              a => a.ActivityCategoryId,
+              ActivityCategories.ToArray()
+            );
+
 
         }
     }

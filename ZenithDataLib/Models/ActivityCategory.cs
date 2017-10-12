@@ -13,7 +13,7 @@ namespace ZenithSociety.Models
         public String ActivityDescription { get; set; }
         public DateTime CreationDate { get; set; }
 
-        public List<Event> events { get; set; }
+        public List<Event> Events { get; set; }
 
     }
 }
