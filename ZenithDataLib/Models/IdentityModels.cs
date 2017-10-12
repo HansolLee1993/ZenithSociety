@@ -25,6 +25,10 @@ namespace ZenithSociety.Models
         {
         }
 
+        public DbSet<Event> Events { get; set; }
+        public DbSet<ActivityCategory> ActivityCategories { get; set; }
+
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

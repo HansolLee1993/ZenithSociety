@@ -1,5 +1,0 @@
-﻿enable-migrations -ContextTypeName ApplicationDbContext -MigrationsDirectory Migrations\ZenithSocirtyMigration
-
-add-migration -ConfigurationTypeName ZenithSociety.Migrations.ZenithSocirtyMigration.Configuration "InitialCreate"
-
-update-database -ConfigurationTypeName ZenithSociety.Migrations.ZenithSocirtyMigration.Configuration
