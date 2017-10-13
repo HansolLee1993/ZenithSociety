@@ -199,17 +199,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\ZenithSocirtyMigrations\201710121846450_InitialCreate.cs" />
-    <Compile Include="Migrations\ZenithSocirtyMigrations\201710121846450_InitialCreate.Designer.cs">
-      <DependentUpon>201710121846450_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\ZenithSocirtyMigrations\201710131841021_Changed.cs" />
-    <Compile Include="Migrations\ZenithSocirtyMigrations\201710131841021_Changed.Designer.cs">
-      <DependentUpon>201710131841021_Changed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\ZenithSocirtyMigrations\201710132015371_Added validation.cs" />
-    <Compile Include="Migrations\ZenithSocirtyMigrations\201710132015371_Added validation.Designer.cs">
-      <DependentUpon>201710132015371_Added validation.cs</DependentUpon>
+    <Compile Include="Migrations\ZenithSocirtyMigrations\201710132243406_Changed.cs" />
+    <Compile Include="Migrations\ZenithSocirtyMigrations\201710132243406_Changed.Designer.cs">
+      <DependentUpon>201710132243406_Changed.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ZenithSocirtyMigrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -305,18 +297,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\ZenithSocirtyMigrations\201710121846450_InitialCreate.resx">
-      <DependentUpon>201710121846450_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\ZenithSocirtyMigrations\201710131841021_Changed.resx">
-      <DependentUpon>201710131841021_Changed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\ZenithSocirtyMigrations\201710132015371_Added validation.resx">
-      <DependentUpon>201710132015371_Added validation.cs</DependentUpon>
-    </EmbeddedResource>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <EmbeddedResource Include="Migrations\ZenithSocirtyMigrations\201710132243406_Changed.resx">
+      <DependentUpon>201710132243406_Changed.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

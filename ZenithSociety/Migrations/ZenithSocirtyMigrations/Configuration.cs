@@ -56,51 +56,68 @@ namespace ZenithSociety.Migrations.ZenithSocirtyMigrations
             // Seed data for ActivityCategory
             List<ActivityCategory> ActivityCategories = new List<ActivityCategory>() {
                  new ActivityCategory {
+                        ActivityCategoryId = 1,
                         ActivityDescription="Senior’s Golf Tournament",
                         CreationDate =  new DateTime(2017, 10, 5, 1, 00, 0)
                     },
                  new ActivityCategory {
+                        ActivityCategoryId = 2,
                         ActivityDescription="Leadership General Assembly Meeting",
                         CreationDate =  new DateTime(2017, 10, 5, 1, 00, 0)
                     },
                  new ActivityCategory {
+                        ActivityCategoryId = 3,
                         ActivityDescription="Youth Bowling Tournament",
                         CreationDate =  new DateTime(2017, 10, 5, 1, 00, 0)
                     },
                  new ActivityCategory {
+                        ActivityCategoryId = 4,
                         ActivityDescription="Young ladies cooking lessons",
                         CreationDate =  new DateTime(2017, 9, 8, 1, 00, 0)
                     },
                  new ActivityCategory {
+                        ActivityCategoryId = 5,
                         ActivityDescription="Youth craft lessons",
                         CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
                     },
                  new ActivityCategory {
+                        ActivityCategoryId = 6,
                         ActivityDescription="Lunch",
                         CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
                     },
                  new ActivityCategory {
+                        ActivityCategoryId = 7,
                         ActivityDescription="Pancake Breakfast",
                         CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
                     },
                  new ActivityCategory {
+                        ActivityCategoryId = 8,
                         ActivityDescription="Swimming Lessons for the youth",
                         CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
                     },
                  new ActivityCategory {
+                        ActivityCategoryId = 9,
                         ActivityDescription="Swimming Exercise for parents",
                         CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
                     },
                  new ActivityCategory {
+                        ActivityCategoryId = 10,
                         ActivityDescription="Bingo Tournament",
                         CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
                     },
                  new ActivityCategory {
+                        ActivityCategoryId = 11,
                         ActivityDescription="BBQ Lunch",
                         CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
                     },
                   new ActivityCategory {
+                        ActivityCategoryId = 12,
                         ActivityDescription="Garage Sale",
+                        CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
+                    },
+                  new ActivityCategory {
+                        ActivityCategoryId = 13,
+                        ActivityDescription="Youth choir practice",
                         CreationDate =  new DateTime(2017, 9, 9, 3, 15, 0)
                     },
                 };
@@ -365,6 +382,227 @@ namespace ZenithSociety.Migrations.ZenithSocirtyMigrations
                   IsActive = true
                   ,
                   ActivityCategoryId = 10
+
+              },
+              new Event()
+              {
+                  EventId = 16
+                  ,
+                  EventFromDate = new DateTime(2017, 10, 17, 8, 30, 0)
+                  ,
+                  EventToDate = new DateTime(2017, 10, 17, 10, 30, 0)
+                  ,
+                  EnteredUserName = "a"
+                  ,
+                  CreationDate = new DateTime(2017, 9, 1, 5, 30, 0)
+                  ,
+                  IsActive = true
+                  ,
+                  ActivityCategoryId = 1
+
+              },
+              new Event()
+              {
+                  EventId = 17
+                  ,
+                  EventFromDate = new DateTime(2017, 10, 18, 8, 30, 0)
+                  ,
+                  EventToDate = new DateTime(2017, 10, 18, 10, 30, 0)
+                  ,
+                  EnteredUserName = "a"
+                  ,
+                  CreationDate = new DateTime(2017, 9, 1, 5, 30, 0)
+                  ,
+                  IsActive = true
+                  ,
+                  ActivityCategoryId = 2
+
+              },
+              new Event()
+              {
+                  EventId = 18
+                  ,
+                  EventFromDate = new DateTime(2017, 10, 20, 17, 30, 0)
+                  ,
+                  EventToDate = new DateTime(2017, 10, 20, 19, 15, 0)
+                  ,
+                  EnteredUserName = "a"
+                  ,
+                  CreationDate = new DateTime(2017, 9, 1, 5, 30, 0)
+                  ,
+                  IsActive = true
+                  ,
+                  ActivityCategoryId = 3
+
+              },
+              new Event()
+              {
+                  EventId = 19
+                  ,
+                  EventFromDate = new DateTime(2017, 10, 20, 19, 00, 0)
+                  ,
+                  EventToDate = new DateTime(2017, 10, 20, 20, 00, 0)
+                  ,
+                  EnteredUserName = "a"
+                  ,
+                  CreationDate = new DateTime(2017, 9, 1, 5, 30, 0)
+                  ,
+                  IsActive = true
+                  ,
+                  ActivityCategoryId = 4
+
+              },
+              new Event()
+              {
+                  EventId = 20
+                  ,
+                  EventFromDate = new DateTime(2017, 10, 21, 8, 30, 0)
+                  ,
+                  EventToDate = new DateTime(2017, 10, 21, 10, 30, 0)
+                  ,
+                  EnteredUserName = "a"
+                  ,
+                  CreationDate = new DateTime(2017, 9, 1, 5, 30, 0)
+                  ,
+                  IsActive = true
+                  ,
+                  ActivityCategoryId = 5
+
+              },
+              new Event()
+              {
+                  EventId = 21
+                  ,
+                  EventFromDate = new DateTime(2017, 10, 21, 10, 30, 0)
+                  ,
+                  EventToDate = new DateTime(2017, 10, 21, 12, 00, 0)
+                  ,
+                  EnteredUserName = "a"
+                  ,
+                  CreationDate = new DateTime(2017, 9, 1, 5, 30, 0)
+                  ,
+                  IsActive = true
+                  ,
+                  ActivityCategoryId = 13
+
+              },
+              new Event()
+              {
+                  EventId = 22
+                  ,
+                  EventFromDate = new DateTime(2017, 10, 21, 12, 00, 0)
+                  ,
+                  EventToDate = new DateTime(2017, 10, 21, 13, 30, 0)
+                  ,
+                  EnteredUserName = "a"
+                  ,
+                  CreationDate = new DateTime(2017, 9, 1, 5, 30, 0)
+                  ,
+                  IsActive = true
+                  ,
+                  ActivityCategoryId = 6
+
+              },
+              new Event()
+              {
+                  EventId = 23
+                  ,
+                  EventFromDate = new DateTime(2017, 10, 22, 7, 30, 0)
+                  ,
+                  EventToDate = new DateTime(2017, 10, 22, 8, 30, 0)
+                  ,
+                  EnteredUserName = "a"
+                  ,
+                  CreationDate = new DateTime(2017, 9, 1, 5, 30, 0)
+                  ,
+                  IsActive = true
+                  ,
+                  ActivityCategoryId = 7
+
+              },
+              new Event()
+              {
+                  EventId = 24
+                  ,
+                  EventFromDate = new DateTime(2017, 10, 22, 8, 30, 0)
+                  ,
+                  EventToDate = new DateTime(2017, 10, 22, 10, 30, 0)
+                  ,
+                  EnteredUserName = "a"
+                  ,
+                  CreationDate = new DateTime(2017, 9, 1, 5, 30, 0)
+                  ,
+                  IsActive = true
+                  ,
+                  ActivityCategoryId = 8
+
+              },
+              new Event()
+              {
+                  EventId = 25
+                  ,
+                  EventFromDate = new DateTime(2017, 10, 22, 8, 30, 0)
+                  ,
+                  EventToDate = new DateTime(2017, 10, 22, 10, 30, 0)
+                  ,
+                  EnteredUserName = "a"
+                  ,
+                  CreationDate = new DateTime(2017, 9, 1, 5, 30, 0)
+                  ,
+                  IsActive = true
+                  ,
+                  ActivityCategoryId = 9
+
+              },
+              new Event()
+              {
+                  EventId = 26
+                  ,
+                  EventFromDate = new DateTime(2017, 10, 22, 10, 30, 0)
+                  ,
+                  EventToDate = new DateTime(2017, 10, 22, 12, 00, 0)
+                  ,
+                  EnteredUserName = "a"
+                  ,
+                  CreationDate = new DateTime(2017, 9, 1, 5, 30, 0)
+                  ,
+                  IsActive = true
+                  ,
+                  ActivityCategoryId = 10
+
+              },
+              new Event()
+              {
+                  EventId = 27
+                  ,
+                  EventFromDate = new DateTime(2017, 10, 22, 12, 00, 0)
+                  ,
+                  EventToDate = new DateTime(2017, 10, 22, 13, 00, 0)
+                  ,
+                  EnteredUserName = "a"
+                  ,
+                  CreationDate = new DateTime(2017, 9, 1, 5, 30, 0)
+                  ,
+                  IsActive = true
+                  ,
+                  ActivityCategoryId = 11
+
+              },
+              new Event()
+              {
+                  EventId = 28
+                  ,
+                  EventFromDate = new DateTime(2017, 10, 22, 13, 00, 0)
+                  ,
+                  EventToDate = new DateTime(2017, 10, 22, 18, 00, 0)
+                  ,
+                  EnteredUserName = "a"
+                  ,
+                  CreationDate = new DateTime(2017, 9, 1, 5, 30, 0)
+                  ,
+                  IsActive = true
+                  ,
+                  ActivityCategoryId = 12
 
               }
             );

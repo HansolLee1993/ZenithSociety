@@ -19,7 +19,7 @@ namespace ZenithSociety.Models
         [Display(Name = "End Date Time")]
         [Required(ErrorMessage = "End date is requred (Ex 2017-09-09 3:15:00 AM)")]
         public DateTime EventToDate { get; set; }
-     
+
 
         private string _Username = "";
         [Display(Name = "Entered By")]
@@ -32,6 +32,7 @@ namespace ZenithSociety.Models
         private DateTime _CreationDate = DateTime.Now;
         [DataType(DataType.Date)]
         [Display(Name = "Creation Date")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:F}")]
         public DateTime CreationDate { get { return _CreationDate; } set { _CreationDate = value; } }
 
         [Display(Name = "Active")]

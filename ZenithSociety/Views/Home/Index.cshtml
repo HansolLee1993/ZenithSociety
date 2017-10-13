@@ -1,9 +1,9 @@
 ﻿@model IEnumerable<ZenithSociety.Models.Event>
 
 @{
-    ViewBag.Title = "ZenithSociety";
+    ViewBag.Title = "Zenith Society";
 }
-<h3 class="text-center col-sm-12">ZenithSociety Event Schedule</h3>
+<h3 class="text-center col-sm-12">Zenith Society Event Schedule</h3>
 <hr />
 
 <table id="eventsOfWeek" class="table text-center">
@@ -14,7 +14,7 @@
             {
                 date = item.EventFromDate;
                  <tr style="background-color:#e3f2fd">
-                    <th class="text-center"colspan="2">@Html.ValueFor(modelItem => item.EventFromDate, "{0:D}")</th>
+                    <th class="text-center"colspan="2">@Html.ValueFor(modelItem => item.EventFromDate, "{0:dddd MMMM d, yyyy}")</th>
                  </tr>
             }
             <tr>
