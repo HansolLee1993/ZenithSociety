@@ -15,8 +15,9 @@ namespace ZenithSociety.Controllers
         public ActionResult Index()
         {
             var events = db.Events.Include(e => e.ActivityCategory).ToList();
-            DateTime first = DateTime.Today.AddDays(1 - ((int)DateTime.Today.DayOfWeek));
-            // 1 offset for start in monday     
+            // 1 offset for start in Monday     
+            int mondayOffset = (((int)DateTime.Today.DayOfWeek) > 0) ? 1 - ((int)DateTime.Today.DayOfWeek) : 1 - 7;
+            DateTime first = DateTime.Today.AddDays(mondayOffset);
             DateTime last = first.AddDays(7);
             List<Event> eventsOfWeek = new List<Event>();
 
