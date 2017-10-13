@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<ZenithSociety.Models.Event>
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -8,3 +10,23 @@
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
+<table id="eventsOfWeek">
+    @{DateTime date = DateTime.MinValue; }
+    @foreach (var item in Model)
+    {
+        if (date.Date.CompareTo(item.EventFromDate.Date) != 0)
+        {
+            date = item.EventFromDate;
+            <tr><th>@Html.ValueFor(modelItem => item.EventFromDate, "{0:D}")</th></tr>
+        }
+        <tr>
+            <td>
+                @Html.ValueFor(modelItem => item.EventFromDate, "{0:t}") - @Html.ValueFor(modelItem => item.EventToDate, "{0:t}")           
+            </td>
+            <td>
+                @Html.ValueFor(modelItem => item.ActivityCategory.ActivityDescription)
+            </td>
+        </tr>
+
+    }
+</table>
