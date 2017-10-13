@@ -50,6 +50,8 @@ namespace ZenithSociety.Controllers
         {
             if (ModelState.IsValid)
             {
+                activityCategory.CreationDate = DateTime.Now;
+
                 db.ActivityCategories.Add(activityCategory);
                 db.SaveChanges();
                 return RedirectToAction("Index");

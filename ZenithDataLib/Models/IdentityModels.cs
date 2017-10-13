@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
+
 namespace ZenithSociety.Models
 {
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
@@ -13,6 +14,7 @@ namespace ZenithSociety.Models
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
+
             // Add custom user claims here
             return userIdentity;
         }
@@ -24,11 +26,12 @@ namespace ZenithSociety.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+     
 
         public DbSet<Event> Events { get; set; }
         public DbSet<ActivityCategory> ActivityCategories { get; set; }
 
-
+      
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
