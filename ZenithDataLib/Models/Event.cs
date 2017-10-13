@@ -10,26 +10,31 @@ namespace ZenithSociety.Models
     {
         public int EventId { get; set; }
 
-        [Required]
-        [Display(Name= "Event From Date")]
-        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy hh:mm tt}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.DateTime)]
+        [Display(Name = "Start Date Time")]
+        [Required(ErrorMessage = "Start date is requred (Ex 2017-09-09 3:15:00 AM)")]
         public DateTime EventFromDate { get; set; }
 
-        [Required]
-        [Display(Name = "Event to Date")]
-        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy hh:mm tt}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.DateTime)]
+        [Display(Name = "End Date Time")]
+        [Required(ErrorMessage = "End date is requred (Ex 2017-09-09 3:15:00 AM)")]
         public DateTime EventToDate { get; set; }
+     
 
-        [Required]
-        [Display(Name = "Enter User Name")]
-        public String EnteredUserName { get; set; }
+        private string _Username = "";
+        [Display(Name = "Entered By")]
+        public string EnteredUserName
+        {
+            get { return _Username; }
+            set { _Username = value; }
+        }
 
-        [Required]
+        private DateTime _CreationDate = DateTime.Now;
+        [DataType(DataType.Date)]
         [Display(Name = "Creation Date")]
-        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy hh:mm tt}", ApplyFormatInEditMode = true)]
-        public DateTime CreationDate { get; set; }
+        public DateTime CreationDate { get { return _CreationDate; } set { _CreationDate = value; } }
 
-
+        [Display(Name = "Active")]
         public bool IsActive { get; set; }
 
         //FK

@@ -3,30 +3,27 @@
 @{
     ViewBag.Title = "Home Page";
 }
+<h2 class="text-center col-sm-12">ZenithSocirty Schedule</h2>
+<hr />
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-
-<table id="eventsOfWeek">
-    @{DateTime date = DateTime.MinValue; }
-    @foreach (var item in Model)
-    {
-        if (date.Date.CompareTo(item.EventFromDate.Date) != 0)
-        {
-            date = item.EventFromDate;
-            <tr><th>@Html.ValueFor(modelItem => item.EventFromDate, "{0:D}")</th></tr>
-        }
-        <tr>
-            <td>
-                @Html.ValueFor(modelItem => item.EventFromDate, "{0:t}") - @Html.ValueFor(modelItem => item.EventToDate, "{0:t}")           
-            </td>
-            <td>
-                @Html.ValueFor(modelItem => item.ActivityCategory.ActivityDescription)
-            </td>
-        </tr>
-
-    }
+<table id="eventsOfWeek" class="table text-center">
+        @{DateTime date = DateTime.MinValue; }
+        @foreach (var item in Model)
+         {
+            if (date.Date.CompareTo(item.EventFromDate.Date) != 0)
+            {
+                date = item.EventFromDate;
+                 <tr style="background-color:aquamarine">
+                    <th class="text-center"colspan="2">@Html.ValueFor(modelItem => item.EventFromDate, "{0:D}")</th>
+                 </tr>
+            }
+            <tr>
+                <td >
+                    @Html.ValueFor(modelItem => item.EventFromDate, "{0:t}") - @Html.ValueFor(modelItem => item.EventToDate, "{0:t}")           
+                </td>
+                <td >
+                    @Html.ValueFor(modelItem => item.ActivityCategory.ActivityDescription)
+                </td>
+            </tr>
+         }
 </table>

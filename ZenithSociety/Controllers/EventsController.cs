@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -53,6 +55,12 @@ namespace ZenithSociety.Controllers
         {
             if (ModelState.IsValid)
             {
+                var store = new UserStore<ApplicationUser>(new ApplicationDbContext());
+                var userManager = new UserManager<ApplicationUser>(store);
+                var user = userManager.FindById(User.Identity.GetUserId());
+                @event.EnteredUserName = user.UserName;
+                @event.CreationDate = DateTime.Now;
+             
                 db.Events.Add(@event);
                 db.SaveChanges();
                 return RedirectToAction("Index");

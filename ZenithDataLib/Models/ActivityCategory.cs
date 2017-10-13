@@ -11,16 +11,18 @@ namespace ZenithSociety.Models
         [Key]
         public int ActivityCategoryId { get; set; }
 
-        [Required]
-        [Display(Name = "Activity ")]
+   
+        [Display(Name = "Activity Description")]
+        [Required(ErrorMessage = "Please Enter Activity Description")]
         public String ActivityDescription { get; set; }
 
 
-        [Required]
-        [Display(Name = "Creation Date")]
+        private DateTime _CreationDate = DateTime.Now;
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy hh:mm tt}", ApplyFormatInEditMode = true)]
-        public DateTime CreationDate { get; set; }
+        //[HiddenInput(DisplayValue = true)]
+        [Display(Name = "Creation Date")]
+        public DateTime CreationDate { get { return _CreationDate; } set { _CreationDate = value; } }
+    
 
         public List<Event> Events { get; set; }
 

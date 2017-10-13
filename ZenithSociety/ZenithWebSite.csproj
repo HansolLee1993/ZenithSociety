@@ -203,6 +203,14 @@
     <Compile Include="Migrations\ZenithSocirtyMigrations\201710121846450_InitialCreate.Designer.cs">
       <DependentUpon>201710121846450_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ZenithSocirtyMigrations\201710131841021_Changed.cs" />
+    <Compile Include="Migrations\ZenithSocirtyMigrations\201710131841021_Changed.Designer.cs">
+      <DependentUpon>201710131841021_Changed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ZenithSocirtyMigrations\201710132015371_Added validation.cs" />
+    <Compile Include="Migrations\ZenithSocirtyMigrations\201710132015371_Added validation.Designer.cs">
+      <DependentUpon>201710132015371_Added validation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ZenithSocirtyMigrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -245,7 +253,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -300,6 +307,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\ZenithSocirtyMigrations\201710121846450_InitialCreate.resx">
       <DependentUpon>201710121846450_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ZenithSocirtyMigrations\201710131841021_Changed.resx">
+      <DependentUpon>201710131841021_Changed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ZenithSocirtyMigrations\201710132015371_Added validation.resx">
+      <DependentUpon>201710132015371_Added validation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
