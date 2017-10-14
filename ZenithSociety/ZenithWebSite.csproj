@@ -199,9 +199,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\ZenithSocirtyMigrations\201710132243406_Changed.cs" />
-    <Compile Include="Migrations\ZenithSocirtyMigrations\201710132243406_Changed.Designer.cs">
-      <DependentUpon>201710132243406_Changed.cs</DependentUpon>
+    <Compile Include="Migrations\ZenithSocirtyMigrations\201710132332497_Changed.cs" />
+    <Compile Include="Migrations\ZenithSocirtyMigrations\201710132332497_Changed.Designer.cs">
+      <DependentUpon>201710132332497_Changed.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ZenithSocirtyMigrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -300,8 +300,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\ZenithSocirtyMigrations\201710132243406_Changed.resx">
-      <DependentUpon>201710132243406_Changed.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\ZenithSocirtyMigrations\201710132332497_Changed.resx">
+      <DependentUpon>201710132332497_Changed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
