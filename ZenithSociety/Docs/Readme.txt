@@ -14,8 +14,8 @@ http://zenithsocietyasn.azurewebsites.net/
 	arroyomorris28@gmail.com
 
 # Major Challenges
-	- Main page week's events table 
-	- Auto generation for dreation data and Username
+	- Main page week's events table
+	- Auto generation for creation data and username
 
 # What you have completed and what you have not completed
 

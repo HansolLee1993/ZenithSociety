@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using ZenithDataLib.Models.Validation;
 
 namespace ZenithSociety.Models
 {
@@ -12,12 +13,15 @@ namespace ZenithSociety.Models
 
         [DataType(DataType.DateTime)]
         [Display(Name = "Start Date Time")]
-        [Required(ErrorMessage = "Start date is requred (Ex 2017-09-09 3:15:00 AM)")]
+        [Required(ErrorMessage = "Start date is required (Ex 2017-09-09 3:15:00 AM)")]
+        [FutureDateTime]
         public DateTime EventFromDate { get; set; }
 
         [DataType(DataType.DateTime)]
         [Display(Name = "End Date Time")]
-        [Required(ErrorMessage = "End date is requred (Ex 2017-09-09 3:15:00 AM)")]
+        [Required(ErrorMessage = "End date is required (Ex 2017-09-09 3:15:00 AM)")]
+        [FutureDateTime]
+        [CompareDateTime("EventFromDate")]
         public DateTime EventToDate { get; set; }
 
 

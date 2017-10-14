@@ -56,6 +56,8 @@
     <Compile Include="Models\ActivityCategory.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Validation\CompareDateTime.cs" />
+    <Compile Include="Models\Validation\FutureDateTime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
